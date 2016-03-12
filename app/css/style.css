@@ -90,7 +90,7 @@ input{
 }
 
 .filterWrapper div.feed{
-    height: 270px;
+    height: 250px;
     overflow-y: auto;
     overflow-x: hidden;
 }
