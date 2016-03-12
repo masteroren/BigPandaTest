@@ -17,6 +17,11 @@
 
         $scope.add= function(){
 
+            if ($scope.comment.email == ''){
+                alert('Email is required');
+                return;
+            }
+
             var imageHash = CryptoJS.MD5($scope.comment.email).toString();
 
             $scope.items.push({
