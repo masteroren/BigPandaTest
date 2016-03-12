@@ -1,0 +1,35 @@
+<div>
+    <div class="mainContainer">
+            <div class="item">
+                <div class="inputWrapper">
+                    <div class="container">
+                        <div class="email">
+                            <input ng-model="comment.email"/>
+                        </div>
+                        <div class="message">
+                            <input ng-model="comment.message"/>
+                        </div>
+                        <div class="submit">
+                            <button ng-click="add()">SUBMIT</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="filterWrapper">
+                    <div class="container">
+                        <div class="filter">
+                            <input ng-model="comment.filter"/>
+                        </div>
+                        <div class="feed">
+                            <div ng-repeat="item in items | filter : comment.filter" class="feedRowContainer">
+                                <img ng-src="http://www.gravatar.com/avatar/{{item.imgHash}}">
+                                <div class="container">
+                                    <span>{{item.email}}</span>
+                                    <span>{{item.message}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
